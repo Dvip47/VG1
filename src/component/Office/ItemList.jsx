@@ -1,0 +1,45 @@
+export const ItemList = [
+  {
+    id: 1,
+    title: "Reception Desk",
+    Price: 5000,
+    discount: 30,
+    src: "/img/office/1.webp",
+    // src: "/img/office/1.webp",
+  },
+  {
+    id: 2,
+    title: "Meeting Desk",
+    Price: 5000,
+    discount: 30,
+    src: "./img/office/2.webp",
+  },
+  {
+    id: 3,
+    title: "InterView Desk",
+    Price: 5000,
+    discount: 30,
+    src: "./img/office/3.webp",
+  },
+  {
+    id: 4,
+    title: "Director's Desk",
+    Price: 5000,
+    discount: 30,
+    src: "./img/office/4.webp",
+  },
+  {
+    id: 5,
+    title: "Multi Purpose Desk",
+    Price: 5000,
+    discount: 30,
+    src: "/img/office/5.webp",
+  },
+  {
+    id: 6,
+    title: "Director's Desk",
+    Price: 5000,
+    discount: 30,
+    src: "./img/office/6.webp",
+  },
+];

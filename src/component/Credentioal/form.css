@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+.container2{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px)
+{
+  .container2{
+    max-width: 1140px;
+  }
+}
+.d-flex2{
+  display: flex;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+form2{
+  flex: 4;
+}
+.Yorder2{
+  flex: 2;
+}
+.title2{
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
+  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+  border-radius:5px 5px 0 0 ;
+  padding: 20px;
+  color: #f6f6f6;
+}
+.heading2{
+  margin: 0;
+  padding-left: 15px; 
+}
+.required2{
+  
+  color: red;
+}
+.label2{
+  display: block;
+  margin: 15px;
+}
+.table2{
+  display: block;
+  margin: 15px;
+}
+.label2>span{
+  /* float: left; */
+  float: right;
+  width: 25%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+.input2[type="text"], .input2[type="tel"], .input2[type="email"],
+select
+{
+  width: 70%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: #888;
+}
+select{
+  
+  width: 72%;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.Yorder2{
+ margin-left: 100px;
+  margin-top: 15px;
+  height: 100%;
+  padding: 20px;
+  border: 3px solid #0b0a3d;
+}
+.table2{
+  
+  margin: 0;
+  padding: 0;
+}
+th{
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+}
+tr>td:nth-child(1){
+  text-align: left;
+  color: #2d2d2a;
+}
+tr>td:nth-child(2){
+  text-align: right;
+  color: #52ad9c;
+}
+td{
+  border-bottom: 1px solid #dadada;
+  padding: 25px 25px 25px 0;
+}
+
+p{
+  display: block;
+  color: #888;
+  margin: 0;
+  padding-left: 25px;
+}
+.Yorder2>div{
+  padding: 15px 0; 
+}
+
+.button2{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #52ad9c;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+.button2:hover{
+  cursor: pointer;
+  background: #428a7d;
+}
+

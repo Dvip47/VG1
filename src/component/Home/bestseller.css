@@ -1,0 +1,41 @@
+.container{
+    height: 100%;
+    width: 380px;
+    background-color: white;
+    border: 3px solid #0e1633;
+    margin-left: 40px;
+    margin-top: 30px;
+    /* border-radius: 10px; */
+}
+.main-container5{
+    height: 100%;
+    width: 100%;
+}
+.disc5{
+    background-color: #0e1633;
+}
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+  .zoom1 {
+    padding: 50px;
+    transition: transform .2s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .zoom1:hover {
+    -ms-transform: scale(4); /* IE 9 */
+    -webkit-transform: scale(4); /* Safari 3-8 */
+    transform: scale(4); 
+  }

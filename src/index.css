@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.scroll {
+  overflow-y: scroll;
+  width: 92%;
+  height: 250px;
+  background-color: aqua;
+  
+  /* border-radius: 7%; */
+}
