@@ -1,8 +1,8 @@
 import React from "react";
-// import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-// import FacebookIcon from "@mui/icons-material/Facebook";
-// import InstagramIcon from "@mui/icons-material/Instagram";
-// import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
 function Footer() {
   return (
     <div
@@ -23,7 +23,7 @@ function Footer() {
           Complete Forniture's Soluntion For You
         </p>
       </div>
-      {/* <div
+      <div
         style={{
           color: "white",
           marginLeft: "150px",
@@ -52,7 +52,7 @@ function Footer() {
         <p style={{ color: "white", textAlign: "center" }}>
           Desined By RoundPay Voice Tech
         </p>
-      </div> */}
+      </div>
       <div style={{ marginLeft: "140px", marginTop: "100px" }}>
         <p style={{ color: "white", textAlign: "center" }}>
           All Copy right Reserve By Vishwakarma Group
