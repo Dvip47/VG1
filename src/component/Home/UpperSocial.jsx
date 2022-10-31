@@ -1,8 +1,8 @@
 import React from "react";
-// import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-// import FacebookIcon from "@mui/icons-material/Facebook";
-// import InstagramIcon from "@mui/icons-material/Instagram";
-// import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import { NavLink } from "react-router-dom";
 function UpperSocial() {
   return (
@@ -10,7 +10,7 @@ function UpperSocial() {
       <div
         style={{ backgroundColor: "#dedee0", height: "45px", fontSize: "18px" }}
       >
-        {/* <div
+        <div
           style={{ color: "#828181", fontWeight: "bold", lineHeight: "-10px" }}
         >
           Welcome to Vishwakarma Group &nbsp;
@@ -43,7 +43,7 @@ function UpperSocial() {
               <WhatsAppIcon />
             </a>
           </i>
-        </div> */}
+        </div>
         <div></div>
       </div>
     </>
