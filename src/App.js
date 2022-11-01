@@ -20,7 +20,7 @@ import Error from "./component/Home/Error";
 import AddProduct from "./component/Product/AddProduct";
 import MainAdmin from "./component/admin/MainAdmin";
 function App() {
-  let finduser = "adsmin";
+  let finduser = "admin";
 
   return (
     <div style={{ backgroundColor: "#d4d2d2", height: "100%", width: "100%" }}>
