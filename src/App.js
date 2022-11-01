@@ -27,7 +27,7 @@ function App() {
       {/* {localStorage.getItem("finduser") == "" ? ( */}
       {finduser === "" ? (
         <>
-          <UpperNavAdmin />
+          {/* <UpperNavAdmin /> */}
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/registation" element={<Register />} />
@@ -37,7 +37,7 @@ function App() {
       ) : //  localStorage.getItem("finduser").role == "admin" ?
       finduser === "admin" ? (
         <>
-          <UpperNavAdmin />
+          {/* <UpperNavAdmin /> */}
           <Routes>
             <Route path="/" element={<MainAdmin />} />
             <Route path="/addProduct" element={<AddProduct />} />
@@ -47,7 +47,7 @@ function App() {
         </>
       ) : (
         <>
-          <UpperSocial />
+          {/* <UpperSocial /> */}
           <Header />
           <NavScrollExample />
           <Banner />
