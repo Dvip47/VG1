@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { navigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "./Reg.css";
 function Register() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     mobile: "",
@@ -24,6 +24,7 @@ function Register() {
     });
   };
   const PostData = async (e) => {
+    e.preventDefault();
     const { name, email, mobile, pass, cpass } = user;
     const res = await fetch("/registation", {
       method: "post",
@@ -43,7 +44,7 @@ function Register() {
     } else {
       console.log("Registation Successfull");
       alert("Registation Successfull");
-      // navigate("/login");
+      navigate("/login");
     }
   };
   return (
@@ -127,7 +128,7 @@ function Register() {
 
           <div className="container signin3">
             <p>
-              Already have an account? <NavLink to="/">Sign in</NavLink>.
+              Already have an account? <NavLink to="/login">Sign in</NavLink>.
             </p>
           </div>
         </form>

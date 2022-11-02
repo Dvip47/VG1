@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 function Login() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",
     pass: "",
@@ -33,8 +34,10 @@ function Login() {
     if (res.status === 400 || !data) {
       window.alert("Invalid usernme or password");
     } else {
-      localStorage.setItem("finduser", res.token);
-      window.alert(`Login Successfull`);
+      localStorage.setItem("token", data?.token);
+      localStorage.setItem("login", "true");
+      alert(`Login Successfull`);
+      navigate("/");
     }
   };
 

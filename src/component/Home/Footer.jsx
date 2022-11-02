@@ -31,24 +31,22 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        {/* <i>
+        <i>
           <a href="">
-            <FacebookIcon
+            {/* <FacebookIcon
               style={{ marginRight: "10px", textAlign: "center" }}
-            />
+            /> */}
           </a>
           <a href="">
-            <FmdGoodIcon style={{ marginRight: "10px", textAlign: "center" }} />
+            {/* <FmdGoodIcon style={{ marginRight: "10px", textAlign: "center" }} /> */}
           </a>
           <a href="">
-            <InstagramIcon
+            {/* <InstagramIcon
               style={{ marginRight: "10px", textAlign: "center" }}
-            />
+            /> */}
           </a>
-          <a href="">
-            <WhatsAppIcon />
-          </a>
-        </i> */}
+          <a href="">{/* <WhatsAppIcon /> */}</a>
+        </i>
         <p style={{ color: "white", textAlign: "center" }}>
           Desined By RoundPay Voice Tech
         </p>

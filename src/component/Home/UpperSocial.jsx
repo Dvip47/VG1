@@ -15,35 +15,29 @@ function UpperSocial() {
         >
           Welcome to Vishwakarma Group &nbsp;
           <NavLink
-            to="/"
+            to="/login"
             style={{
               textDecoration: "none",
               color: "red",
-              marginLeft: "750px",
+              marginLeft: "550px",
               marginRight: "10px",
             }}
           >
-            Log Out
+            Log In
           </NavLink>
-          {/* <i>
-            <a href="">
-              <FacebookIcon
-                style={{
-                  marginRight: "10px",
-                }}
-              />
-            </a>
-            <a href="">
-              <FmdGoodIcon style={{ marginRight: "10px" }} />
-            </a>
-            <a href="">
-              <InstagramIcon style={{ marginRight: "10px" }} />
-            </a>
-            <a href="">
-              <WhatsAppIcon />
-            </a>
-          </i> */}
+          <NavLink
+            to="/registation"
+            style={{
+              textDecoration: "none",
+              color: "red",
+              // marginLeft: "750px",
+              // marginRight: "10px",
+            }}
+          >
+            Register
+          </NavLink>{" "}
         </div>
+        <div></div>
       </div>
     </>
   );

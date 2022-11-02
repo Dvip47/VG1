@@ -1,5 +1,5 @@
 // import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Bed from "./component/Bed/Bed";
 import Chair from "./component/Chair/Chair";
@@ -19,25 +19,14 @@ import Office from "./component/Office/Office";
 import Error from "./component/Home/Error";
 import AddProduct from "./component/Product/AddProduct";
 import MainAdmin from "./component/admin/MainAdmin";
+import jwt from "jwt-decode";
 function App() {
-  let finduser = "admin";
-
   return (
     <div style={{ backgroundColor: "#d4d2d2", height: "100%", width: "100%" }}>
-      {/* {localStorage.getItem("finduser") == "" ? ( */}
-      {finduser === "" ? (
+      {localStorage.getItem("login") &&
+      jwt(localStorage.getItem("token"))?.data?.role == "admin" ? (
         <>
-          {/* <UpperNavAdmin /> */}
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/registation" element={<Register />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </>
-      ) : //  localStorage.getItem("finduser").role == "admin" ?
-      finduser === "admin" ? (
-        <>
-          {/* <UpperNavAdmin /> */}
+          <UpperNavAdmin />
           <Routes>
             <Route path="/" element={<MainAdmin />} />
             <Route path="/addProduct" element={<AddProduct />} />
@@ -47,11 +36,13 @@ function App() {
         </>
       ) : (
         <>
-          {/* <UpperSocial /> */}
+          <UpperSocial />
           <Header />
           <NavScrollExample />
           <Banner />
           <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/registation" element={<Register />} />
             <Route path="/" element={<Index />} />
             <Route path="/bed" element={<Bed />} />
             <Route path="/chair" element={<Chair />} />
