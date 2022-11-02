@@ -11,7 +11,6 @@ function UpperNavAdmin() {
     <>
       <div
         style={{ backgroundColor: "#dedee0", height: "45px", fontSize: "18px" }}
-        onClick={logout}
       >
         &nbsp;&nbsp;
         <NavLink
@@ -20,8 +19,19 @@ function UpperNavAdmin() {
             textDecoration: "none",
             color: "red",
           }}
+          onClick={logout}
         >
           Log Out
+        </NavLink>
+        &nbsp;&nbsp;
+        <NavLink
+          to="/addProduct"
+          style={{
+            textDecoration: "none",
+            color: "red",
+          }}
+        >
+          Add Product
         </NavLink>
       </div>
     </>
