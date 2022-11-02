@@ -1,8 +1,8 @@
 import React from "react";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FmdGoodIcon from "@mui/icons-material/FmdGood";
+// import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import FmdGoodIcon from "@mui/icons-material/FmdGood";
 function Footer() {
   return (
     <div
@@ -31,7 +31,7 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        <i>
+        {/* <i>
           <a href="">
             <FacebookIcon
               style={{ marginRight: "10px", textAlign: "center" }}
@@ -48,7 +48,7 @@ function Footer() {
           <a href="">
             <WhatsAppIcon />
           </a>
-        </i>
+        </i> */}
         <p style={{ color: "white", textAlign: "center" }}>
           Desined By RoundPay Voice Tech
         </p>

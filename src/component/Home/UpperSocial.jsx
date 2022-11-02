@@ -1,8 +1,8 @@
 import React from "react";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FmdGoodIcon from "@mui/icons-material/FmdGood";
+// import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import { NavLink } from "react-router-dom";
 function UpperSocial() {
   return (
@@ -25,7 +25,7 @@ function UpperSocial() {
           >
             Log Out
           </NavLink>
-          <i>
+          {/* <i>
             <a href="">
               <FacebookIcon
                 style={{
@@ -42,9 +42,8 @@ function UpperSocial() {
             <a href="">
               <WhatsAppIcon />
             </a>
-          </i>
+          </i> */}
         </div>
-        <div></div>
       </div>
     </>
   );
