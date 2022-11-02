@@ -22,7 +22,7 @@ function Login() {
   const LoginUser = async (e) => {
     e.preventDefault();
     const { email, pass } = user;
-    const res = await fetch("/signin", {
+    const res = await fetch("https://vishwagroup.herokuapp.com/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
