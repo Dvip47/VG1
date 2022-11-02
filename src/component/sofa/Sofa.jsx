@@ -10,7 +10,7 @@ function Sofa() {
   const [sofaList, setSofaList] = useState([]);
   const CallSofaList = async () => {
     try {
-      const res = await fetch("/sofa", {
+      const res = await fetch("https://vishwagroup.herokuapp.com/sofa", {
         method: "get",
         credentials: "include",
       });
