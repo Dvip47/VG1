@@ -24,17 +24,6 @@ function UpperNavAdmin() {
         </NavLink>
         &nbsp;&nbsp;
         <NavLink
-          to="/"
-          style={{
-            textDecoration: "none",
-            color: "red",
-          }}
-          onClick={logout}
-        >
-          Log Out
-        </NavLink>
-        &nbsp;&nbsp;
-        <NavLink
           to="/addProduct"
           style={{
             textDecoration: "none",
@@ -42,6 +31,18 @@ function UpperNavAdmin() {
           }}
         >
           Add Product
+        </NavLink>
+        &nbsp;&nbsp;
+        <NavLink
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "red",
+            paddingLeft: "600px",
+          }}
+          onClick={logout}
+        >
+          Log Out
         </NavLink>
       </div>
     </>
