@@ -6,7 +6,7 @@ function DashBoard() {
   const [orderDetail, setOrderDetail] = useState([]);
   const CallOrderDetails = async () => {
     try {
-      const res = await fetch("/admin", {
+      const res = await fetch("/order", {
         method: "get",
         credentials: "include",
       });

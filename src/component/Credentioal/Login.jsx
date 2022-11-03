@@ -67,6 +67,7 @@ function Login() {
                 placeholder="Enter password"
                 name="pass"
                 onChange={handleInputs}
+                autoComplete="on"
                 required
               />
             </div>
