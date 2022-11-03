@@ -38,7 +38,7 @@ function UpperNavAdmin() {
           style={{
             textDecoration: "none",
             color: "red",
-            paddingLeft: "600px",
+            paddingLeft: "1100px",
           }}
           onClick={logout}
         >
