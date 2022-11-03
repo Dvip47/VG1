@@ -5,7 +5,7 @@ function User() {
   const [user, setUser] = useState([]);
   const CallUserData = async () => {
     try {
-      const res = await fetch("/user", {
+      const res = await fetch("https://vishwagroup.herokuapp.com/user", {
         method: "get",
         credentials: "include",
       });

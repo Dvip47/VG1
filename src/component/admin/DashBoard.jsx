@@ -6,7 +6,7 @@ function DashBoard() {
   const [orderDetail, setOrderDetail] = useState([]);
   const CallOrderDetails = async () => {
     try {
-      const res = await fetch("/order", {
+      const res = await fetch("https://vishwagroup.herokuapp.com/order", {
         method: "get",
         credentials: "include",
       });

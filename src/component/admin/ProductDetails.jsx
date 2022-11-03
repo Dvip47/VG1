@@ -22,7 +22,9 @@ function ProductDetails() {
     CallProductData();
   }, []);
   const handleDelete = async (data) => {
-    const res = await axios(`/deleteProduct${data?._id}`);
+    const res = await axios(
+      `https://vishwagroup.herokuapp.com/deleteProduct${data?._id}`
+    );
     if (res.status === 200) {
       alert(`${data?.title} deleted`);
       CallProductData();
