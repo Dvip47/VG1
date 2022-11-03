@@ -20,7 +20,7 @@ function UpperNavAdmin() {
             color: "blue",
           }}
         >
-          Add Product
+          Home
         </NavLink>
         &nbsp;&nbsp;
         <NavLink
