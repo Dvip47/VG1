@@ -5,7 +5,7 @@ function ProductDetails() {
   const [product, setProduct] = useState([]);
   const CallProductData = async () => {
     try {
-      const res = await fetch("/product", {
+      const res = await fetch("https://vishwagroup.herokuapp.com/product", {
         method: "get",
         credentials: "include",
       });
