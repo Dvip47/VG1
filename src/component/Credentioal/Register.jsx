@@ -26,7 +26,7 @@ function Register() {
   const PostData = async (e) => {
     e.preventDefault();
     const { name, email, mobile, pass, cpass } = user;
-    const res = await fetch("/registation", {
+    const res = await fetch("https://vishwagroup.herokuapp.com/registation", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

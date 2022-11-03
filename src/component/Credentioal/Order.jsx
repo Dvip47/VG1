@@ -53,7 +53,7 @@ function Order() {
       price,
       pMode,
     } = placeOrder;
-    const res = await fetch("/order", {
+    const res = await fetch("https://vishwagroup.herokuapp.com/order", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

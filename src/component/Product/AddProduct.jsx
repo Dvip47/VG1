@@ -24,7 +24,7 @@ function AddProduct() {
   const PostData = async (e) => {
     // e.preventDefault();
     const { id, category, src, title, description, Price, discount } = product;
-    const res = await fetch("/addProduct", {
+    const res = await fetch("https://vishwagroup.herokuapp.com/addProduct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -10,7 +10,7 @@ function Door() {
   const [doorList, setDoorList] = useState([]);
   const CallDoorList = async () => {
     try {
-      const res = await fetch("/door", {
+      const res = await fetch("https://vishwagroup.herokuapp.com/door", {
         method: "get",
         credentials: "include",
       });
