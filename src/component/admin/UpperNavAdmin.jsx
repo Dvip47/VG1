@@ -17,6 +17,16 @@ function UpperNavAdmin() {
           to="/"
           style={{
             textDecoration: "none",
+            color: "blue",
+          }}
+        >
+          Add Product
+        </NavLink>
+        &nbsp;&nbsp;
+        <NavLink
+          to="/"
+          style={{
+            textDecoration: "none",
             color: "red",
           }}
           onClick={logout}
