@@ -93,7 +93,7 @@ function Order() {
     var options = {
       key: process.env.REACT_APP_razorpaytest_id,
       // amount: price * quantity, // 2000 paise = INR 20, amount in paisa
-      amount: 100, // 2000 paise = INR 20, amount in paisa
+      amount: 1, // 2000 paise = INR 20, amount in paisa
       name: "Verma Watch",
       description: "Thanks for purchasing",
       // order_id: "",
@@ -129,7 +129,7 @@ function Order() {
       },
     };
     axios
-      .post("https://vishwagroup.herokuapp.com/paymentgateway", { amount: 100 })
+      .post("https://vishwagroup.herokuapp.com/paymentgateway", { amount: 1 })
       .then((res) => {
         options.order_id = res.data.id;
         options.amount = res.data.amount;
