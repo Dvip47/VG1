@@ -3,6 +3,9 @@ import { useState } from "react";
 import { useContext } from "react";
 import { DataContext } from "../../context/DataState";
 import "./form.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 function Order() {
   const { order } = useContext(DataContext);
   const [quantity, setQuantity] = useState(1);
@@ -25,7 +28,7 @@ function Order() {
     price: `${discountPrice * quantity}`,
     pMode: "",
   });
-
+  const navigate = useNavigate();
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setPlaceOrder((prev) => {
@@ -35,9 +38,7 @@ function Order() {
       };
     });
   };
-
   const PlaceOrder = async (e) => {
-    e.preventDefault();
     const {
       fname,
       lname,
@@ -79,6 +80,70 @@ function Order() {
       window.alert("Order Placed");
     }
   };
+  const componentDidMount = () => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+  };
+
+  const openPayModal = () => {
+    componentDidMount();
+    // var amount = price * quantity; //Razorpay consider the amount in paise
+    var options = {
+      key: process.env.REACT_APP_razorpaytest_id,
+      // amount: price * quantity, // 2000 paise = INR 20, amount in paisa
+      amount: 1, // 2000 paise = INR 20, amount in paisa
+      name: "Verma Watch",
+      description: "Thanks for purchasing",
+      order_id: "",
+      handler: function (response) {
+        var values = {
+          razorpay_signature: response.razorpay_signature,
+          razorpay_order_id: response.razorpay_order_id,
+          transactionid: response.razorpay_payment_id,
+          transactionamount: 1,
+        };
+        axios
+          .post("https://vermawatchh.herokuapp.com/payment", values)
+          .then((res) => {
+            // go();
+            // orderStore();
+            // navigate(`/status/${idd}/${brandd}/`);
+          })
+          .catch((e) => console.log(e));
+      },
+      // user details
+      prefill: {
+        name: "Manish",
+        email: "vmainshkuma04@gmail.com",
+        contac: 8736079780,
+      },
+      notes: {
+        address: "Eldeco",
+      },
+      theme: {
+        color: "#528ff0",
+      },
+    };
+    axios
+      .post("/order", { amount: 1 })
+      .then((res) => {
+        options.order_id = res.data.id;
+        options.amount = res.data.amount;
+        // paymentID = options.order_id;
+        // payment = options.amount / 100;
+        var rzp1 = new window.Razorpay(options);
+        rzp1.open();
+      })
+      .catch((e) => {
+        // alert("Please fill correct details");
+        // navigate("/");
+        console.log(e);
+      });
+  };
+
+  // razorpay over
 
   return (
     <>
@@ -299,7 +364,7 @@ function Order() {
               />{" "}
               Debit card
             </div>
-            <button type="button" className="button1" onClick={PlaceOrder}>
+            <button type="button" className="button1" onClick={openPayModal}>
               Place Order
             </button>
           </div>
