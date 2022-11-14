@@ -94,7 +94,7 @@ function Order() {
       key: process.env.REACT_APP_razorpaytest_id,
       // amount: price * quantity, // 2000 paise = INR 20, amount in paisa
       amount: 1, // 2000 paise = INR 20, amount in paisa
-      name: "Verma Watch",
+      name: "RoundPay",
       description: "Thanks for purchasing",
       order_id: "",
       handler: function (response) {
@@ -115,12 +115,12 @@ function Order() {
       },
       // user details
       prefill: {
-        name: "Manish",
-        email: "vmainshkuma04@gmail.com",
-        contac: 8736079780,
+        name: "Vipin Kumar",
+        email: "vipinlohar01@gmail.com",
+        contac: +919616253237,
       },
       notes: {
-        address: "Eldeco",
+        address: "roundpay",
       },
       theme: {
         color: "#528ff0",
@@ -327,43 +327,6 @@ function Order() {
               </tr>
             </table>
             <br />
-
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Cash on Delivery"
-              />{" "}
-              Cash on Delivery
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Paytm"
-              />
-              Paytm
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Credit Card"
-              />
-              Credit Card
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Debit Card"
-              />{" "}
-              Debit card
-            </div>
             <button type="button" className="button1" onClick={openPayModal}>
               Place Order
             </button>

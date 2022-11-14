@@ -42,7 +42,7 @@
       "react-app/jest"
     ]
   },
-  "proxy":"https://vermawatchh.herokuapp.com",
+  "proxy":"https://vishwagroup.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",

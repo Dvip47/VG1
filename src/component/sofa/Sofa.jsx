@@ -4,16 +4,12 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { DataContext } from "../../context/DataState";
-import { SofaList } from "./SofaList";
 function Sofa() {
   const { setOrder } = useContext(DataContext);
   const [sofaList, setSofaList] = useState([]);
   const CallSofaList = async () => {
     try {
-      const res = await fetch("https://vishwagroup.herokuapp.com/sofa", {
-        method: "get",
-        credentials: "include",
-      });
+      const res = await fetch("https://vishwagroup.herokuapp.com/sofa", {});
       const data = await res.json();
       if (res.status == 200) {
         setSofaList(data?.message);
