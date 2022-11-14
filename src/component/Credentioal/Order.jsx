@@ -93,10 +93,10 @@ function Order() {
     var options = {
       key: process.env.REACT_APP_razorpaytest_id,
       // amount: price * quantity, // 2000 paise = INR 20, amount in paisa
-      amount: 1, // 2000 paise = INR 20, amount in paisa
-      name: "RoundPay",
+      amount: 100, // 2000 paise = INR 20, amount in paisa
+      name: "Verma Watch",
       description: "Thanks for purchasing",
-      order_id: "",
+      // order_id: "",
       handler: function (response) {
         var values = {
           razorpay_signature: response.razorpay_signature,
@@ -105,35 +105,37 @@ function Order() {
           transactionamount: 1,
         };
         axios
-          .post("https://vermawatchh.herokuapp.com/payment", values)
+          .post("/payment", values)
           .then((res) => {
             // go();
             // orderStore();
             // navigate(`/status/${idd}/${brandd}/`);
+            // navigate("/");
+            console.log(res);
           })
           .catch((e) => console.log(e));
       },
       // user details
       prefill: {
-        name: "Vipin Kumar",
-        email: "vipinlohar01@gmail.com",
-        contac: +919616253237,
+        name: "Manish",
+        email: "vmainshkuma04@gmail.com",
+        contac: 8736079780,
       },
       notes: {
-        address: "roundpay",
+        address: "Eldeco",
       },
       theme: {
         color: "#528ff0",
       },
     };
     axios
-      .post("/order", { amount: 1 })
+      .post("https://vishwagroup.herokuapp.com/paymentgateway", { amount: 100 })
       .then((res) => {
         options.order_id = res.data.id;
         options.amount = res.data.amount;
         // paymentID = options.order_id;
         // payment = options.amount / 100;
-        var rzp1 = new window.Razorpay(options);
+        let rzp1 = new window.Razorpay(options);
         rzp1.open();
       })
       .catch((e) => {
@@ -327,8 +329,45 @@ function Order() {
               </tr>
             </table>
             <br />
+
+            <div>
+              <input
+                type="radio"
+                name="pMode"
+                onChange={handleInputs}
+                value="Cash on Delivery"
+              />{" "}
+              Cash on Delivery
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="pMode"
+                onChange={handleInputs}
+                value="Paytm"
+              />
+              Paytm
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="pMode"
+                onChange={handleInputs}
+                value="Credit Card"
+              />
+              Credit Card
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="pMode"
+                onChange={handleInputs}
+                value="Debit Card"
+              />{" "}
+              Debit card
+            </div>
             <button type="button" className="button1" onClick={openPayModal}>
-              Place Order
+              Payment
             </button>
           </div>
         </div>

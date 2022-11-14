@@ -11,7 +11,7 @@ function Sofa() {
     try {
       const res = await fetch("https://vishwagroup.herokuapp.com/sofa", {});
       const data = await res.json();
-      if (res.status == 200) {
+      if (res.status === 200) {
         setSofaList(data?.message);
       }
     } catch (err) {
