@@ -337,42 +337,6 @@ function Order() {
             </table>
             <br />
 
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Cash on Delivery"
-              />{" "}
-              Cash on Delivery
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Paytm"
-              />
-              Paytm
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Credit Card"
-              />
-              Credit Card
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="pMode"
-                onChange={handleInputs}
-                value="Debit Card"
-              />{" "}
-              Debit card
-            </div>
             <button type="button" className="button1" onClick={openPayModal}>
               Payment
             </button>
