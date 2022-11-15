@@ -93,8 +93,8 @@ function Order() {
     var options = {
       key: process.env.REACT_APP_razorpaytest_id,
       // amount: price * quantity, // 2000 paise = INR 20, amount in paisa
-      amount: 1, // 2000 paise = INR 20, amount in paisa
-      name: "Verma Watch",
+      amount: discountPrice, // 2000 paise = INR 20, amount in paisa
+      name: "VishwakarmaGroup",
       description: "Thanks for purchasing",
       // order_id: "",
       handler: function (response) {
@@ -117,19 +117,26 @@ function Order() {
       },
       // user details
       prefill: {
-        name: "Manish",
-        email: "vmainshkuma04@gmail.com",
-        contac: 8736079780,
+        name: placeOrder?.fname + placeOrder?.lname,
+        email: placeOrder?.email,
+        contact: placeOrder?.mobile,
       },
       notes: {
-        address: "Eldeco",
+        address:
+          placeOrder?.companyName +
+          placeOrder?.street +
+          placeOrder?.city +
+          placeOrder?.state +
+          placeOrder?.pinCode,
       },
       theme: {
         color: "#528ff0",
       },
     };
     axios
-      .post("https://vishwagroup.herokuapp.com/paymentgateway", { amount: 1 })
+      .post("https://vishwagroup.herokuapp.com/paymentgateway", {
+        amount: discountPrice,
+      })
       .then((res) => {
         options.order_id = res.data.id;
         options.amount = res.data.amount;
