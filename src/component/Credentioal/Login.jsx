@@ -34,12 +34,11 @@ function Login() {
     if (res.status === 400 || !data) {
       window.alert("Invalid usernme or password");
     } else {
+      const reload = window.location.reload("/");
+      navigate(reload);
       localStorage.setItem("token", data?.token);
       localStorage.setItem("login", "true");
       alert(`Login Successfull`);
-
-      const reload = window.location.reload("https://vg-1.vercel.app/");
-      navigate(reload);
     }
   };
 
