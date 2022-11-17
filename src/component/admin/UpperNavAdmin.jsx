@@ -5,7 +5,8 @@ function UpperNavAdmin() {
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("login");
-    navigate("/");
+    const reload = window.location.reload("/");
+    navigate(reload);
   };
   return (
     <>
