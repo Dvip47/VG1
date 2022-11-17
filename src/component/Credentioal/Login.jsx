@@ -36,6 +36,8 @@ function Login() {
     } else {
       localStorage.setItem("token", data?.token);
       localStorage.setItem("login", "true");
+      const reload = window.location.reload("/");
+      navigate(reload);
       alert(`Login Successfull`);
     }
   };
