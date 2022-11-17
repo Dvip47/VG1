@@ -38,7 +38,7 @@ function Login() {
       localStorage.setItem("login", "true");
       alert(`Login Successfull`);
 
-      const reload = window.location.reload("#");
+      const reload = window.location.reload("https://vg-1.vercel.app/");
       navigate(reload);
     }
   };
