@@ -44,6 +44,9 @@ function AddProduct() {
     } else if (data.status == 200) {
       console.log(data.message);
       alert(data.message);
+    } else if (data.status == 000) {
+      console.log(data.message);
+      alert(data.message);
     } else {
       console.log(data.status);
       alert("Server Error! Try after some time");
