@@ -48,7 +48,7 @@ function AddProduct() {
   return (
     <div>
       <div className="abc3">
-        <form enctype="multipart/form-data" onSubmit={PostData}>
+        <form enctype="multipart/form-data">
           <div className="container3">
             <h1 className=" Auth-form-title1">Add New Product</h1>
             <p>Fill information about product</p>
@@ -177,7 +177,7 @@ function AddProduct() {
               required
               onChange={handleInputs}
             />
-            <button type="submit" className="registerbtn3">
+            <button type="submit" className="registerbtn3" onClick={PostData}>
               Add Product
             </button>
           </div>
