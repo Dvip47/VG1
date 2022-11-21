@@ -38,7 +38,7 @@ function AddProduct() {
       }),
     });
     const data = await res.json();
-    if (data.status === 422 || !data) {
+    if (data.status == 422 || !data) {
       console.log("Product Not Add");
       alert("Product Not Add");
     } else {
