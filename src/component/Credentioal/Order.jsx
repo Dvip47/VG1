@@ -75,6 +75,7 @@ function Order() {
     });
     const data = await res.json();
     if (res.status === 400 || !data) {
+      console.log();
       alert("Order not place, TRY AGAIN");
     } else {
       alert("Order Placed");
@@ -337,7 +338,13 @@ function Order() {
             </table>
             <br />
 
-            <button type="button" className="button1" onClick={openPayModal}>
+            <button
+              type="button"
+              className="button1"
+              onClick={() => {
+                openPayModal(), PlaceOrder();
+              }}
+            >
               Payment
             </button>
           </div>
