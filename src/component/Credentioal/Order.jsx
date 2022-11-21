@@ -154,7 +154,11 @@ function Order() {
   };
 
   // razorpay over
-
+  //order after payment
+  const FinalOrder = () => {
+    PlaceOrder();
+    openPayModal();
+  };
   return (
     <>
       <div className="container2">
@@ -338,13 +342,7 @@ function Order() {
             </table>
             <br />
 
-            <button
-              type="button"
-              className="button1"
-              onClick={() => {
-                openPayModal(), PlaceOrder();
-              }}
-            >
+            <button type="button" className="button1" onClick={FinalOrder}>
               Payment
             </button>
           </div>
