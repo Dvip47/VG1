@@ -48,7 +48,7 @@ function AddProduct() {
   return (
     <div>
       <div className="abc3">
-        <form>
+        <form enctype="multipart/form-data" onSubmit={PostData}>
           <div className="container3">
             <h1 className=" Auth-form-title1">Add New Product</h1>
             <p>Fill information about product</p>
@@ -114,18 +114,11 @@ function AddProduct() {
             <label for="mothman">Office</label>
             <br />
             <br />
+            <br />
             <label for="email">
               <b>Image</b>
             </label>
-            <br />
-            <input
-              // type="file"
-              type="text"
-              id="src"
-              name="src"
-              // value=""
-              onChange={handleInputs}
-            />
+            <input type="file" id="src" name="src" onChange={handleInputs} />
             <br></br>
             <br />
             <label for="email">
@@ -184,7 +177,7 @@ function AddProduct() {
               required
               onChange={handleInputs}
             />
-            <button type="submit" className="registerbtn3" onClick={PostData}>
+            <button type="submit" className="registerbtn3">
               Add Product
             </button>
           </div>
