@@ -38,12 +38,15 @@ function AddProduct() {
       }),
     });
     const data = await res.json();
-    if (data.status == 422 || !data) {
+    if (data.status == 422) {
       console.log("Product Not Add");
-      alert("Product Not Add");
+      alert(data.error);
+    } else if (data.status == 200) {
+      console.log(data.message);
+      alert(data.message);
     } else {
       console.log(data);
-      alert("Product added successfull");
+      alert("Server Error! Try after some time");
     }
   };
   return (
