@@ -22,7 +22,7 @@ function AddProduct() {
     });
   };
   const PostData = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const { id, category, src, title, description, Price, discount } = product;
     const res = await fetch("https://vishwagroup.herokuapp.com/addProduct", {
       method: "POST",
