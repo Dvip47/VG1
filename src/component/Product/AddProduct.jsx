@@ -39,10 +39,11 @@ function AddProduct() {
     });
     const data = await res.json();
     if (data.status === 422 || !data) {
-      window.alert("Product Not Add");
+      console.log("Product Not Add");
+      alert("Product Not Add");
     } else {
       console.log(data);
-      window.alert("Product added successfull");
+      alert("Product added successfull");
     }
   };
   return (
