@@ -38,14 +38,14 @@ function AddProduct() {
       }),
     });
     const data = await res.json();
-    if (data.status === 442) {
+    if (data.status == 442) {
       console.log("Product Not Add");
       alert(data.error);
-    } else if (data.status === 200) {
+    } else if (data.status == 200) {
       console.log(data.message);
       alert(data.message);
     } else {
-      console.log(data);
+      console.log(data.status);
       alert("Server Error! Try after some time");
     }
   };
