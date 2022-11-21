@@ -156,8 +156,8 @@ function Order() {
   // razorpay over
   //order after payment
   const FinalOrder = () => {
-    PlaceOrder();
     openPayModal();
+    PlaceOrder();
   };
   return (
     <>
