@@ -40,7 +40,7 @@ function AddProduct() {
     const data = await res.json();
     if (data.status == 442) {
       console.log("Product Not Add");
-      alert(data.error);
+      alert(data.message);
     } else if (data.status == 200) {
       console.log(data.message);
       alert(data.message);
