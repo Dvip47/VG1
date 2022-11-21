@@ -75,9 +75,9 @@ function Order() {
     });
     const data = await res.json();
     if (res.status === 400 || !data) {
-      window.alert("Order not place, TRY AGAIN");
+      alert("Order not place, TRY AGAIN");
     } else {
-      window.alert("Order Placed");
+      alert("Order Placed");
     }
   };
   const componentDidMount = () => {
@@ -146,8 +146,8 @@ function Order() {
         rzp1.open();
       })
       .catch((e) => {
-        // alert("Please fill correct details");
-        // navigate("/");
+        alert("Please fill correct details");
+        navigate("/");
         console.log(e);
       });
   };
